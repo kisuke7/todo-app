@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/kisuke7/todo-app.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh './mvnw clean package -DskipTests'
@@ -35,3 +29,4 @@ pipeline {
         }
     }
 }
+
