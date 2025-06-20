@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh 'docker stop todo-app || true'
                 sh 'docker rm todo-app || true'
-                sh 'docker run -d -p 8081:8080 --name todo-app todo-app
+                sh 'docker run -d -p 8081:8080 --name todo-app todo-app'
 '
             }
         }
