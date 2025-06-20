@@ -27,6 +27,12 @@ pipeline {
                 sh 'docker run -d -p 8081:8080 --name todo-app todo-app'
             }
         }
+
+        stage('Deploy with Ansible') {
+            steps {
+                sh 'ansible-playbook -i ansible/inventory ansible/playbook.yml'
+            }
+        }
     }
 }
 

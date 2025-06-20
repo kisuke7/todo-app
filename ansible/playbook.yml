@@ -1,0 +1,5 @@
+- name: Deploy ToDo App Container
+  hosts: web
+  become: yes
+  roles:
+    - deploy
