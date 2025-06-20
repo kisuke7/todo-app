@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/todo-app.git'
+                git 'https://github.com/kisuke7/todo-app.git'
             }
         }
 
